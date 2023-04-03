@@ -114,7 +114,7 @@ def report(victim, amount, reason, cooldown, descriptions):
 
 		proxies = {
 			"http": Utils.getProxy()
-		}).text)["Id"]
+		}).text)["id"]
 
 	Write.Print(f"[>] Victim's User ID: {id}\n", Colors.purple_to_blue, interval=0.0025)
 
