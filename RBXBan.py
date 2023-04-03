@@ -105,8 +105,7 @@ def report(victim, amount, reason, cooldown, descriptions):
 	if amount == 0:
 		amount = 999999999999999
 		
-	id = json.loads(requests.get(
-		f"https://api.roblox.com/users/get-by-username?username={victim}",
+	id = json.loads(requests.get(f"https://api.roblox.com/users/get-by-username?username={victim}",
 		headers={
 			"referer": "https://www.roblox.com",
 			"User-Agent": Utils.getUserAgent()
@@ -114,7 +113,7 @@ def report(victim, amount, reason, cooldown, descriptions):
 
 		proxies = {
 			"http": Utils.getProxy()
-		}).text)["id"]
+		}).text)
 
 	Write.Print(f"[>] Victim's User ID: {id}\n", Colors.purple_to_blue, interval=0.0025)
 
