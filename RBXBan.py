@@ -35,7 +35,7 @@ class Utils:
 		return cookie
 
 	def getXCsrf(cookie):
-	    xcsrfRequest = requests.post("https://auth.roblox.com/v2/logout",
+	    xcsrfRequest = requests.get("https://auth.roblox.com/v2/logout",
 									 
 		headers = {"referer": "https://roblox.com", "User-Agent": Utils.getUserAgent()},
 		cookies = {".ROBLOSECURITY": cookie},
